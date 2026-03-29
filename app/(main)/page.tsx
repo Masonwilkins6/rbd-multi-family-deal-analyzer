@@ -137,18 +137,8 @@ export default async function DashboardPage() {
                 {analyzed.map(({ deal, metrics }) => (
                   <tr key={deal.id}>
                     <td>
-                      <Link
-                        href={`/deals/${deal.id}`}
-                        style={{ textDecoration: 'none' }}
-                      >
-                        <div
-                          className="table-cell-primary truncate-line"
-                          style={{ transition: 'color 0.1s', cursor: 'pointer' }}
-                          onMouseEnter={e => (e.currentTarget.style.color = 'var(--color-brand)')}
-                          onMouseLeave={e => (e.currentTarget.style.color = '')}
-                        >
-                          {deal.name}
-                        </div>
+                      <Link href={`/deals/${deal.id}`} className="deal-row-link">
+                        <div className="deal-row-name truncate-line">{deal.name}</div>
                         <div className="table-cell-muted" style={{ marginTop: 2 }}>
                           {deal.neighborhood}
                         </div>

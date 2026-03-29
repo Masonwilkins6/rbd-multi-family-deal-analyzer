@@ -1043,6 +1043,21 @@ body {
 .num { font-variant-numeric: tabular-nums; }
 .truncate-line { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
+.deal-row-link {
+  display: block;
+  text-decoration: none;
+}
+
+.deal-row-name {
+  font-weight: 600;
+  color: var(--color-text);
+  transition: color var(--duration-fast) var(--ease);
+}
+
+.deal-row-link:hover .deal-row-name {
+  color: var(--color-brand);
+}
+
 /* Live analysis panel */
 .live-panel-header {
   display: flex;
